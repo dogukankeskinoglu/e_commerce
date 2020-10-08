@@ -56,18 +56,28 @@ class _ProductDetailState extends State<ProductDetail> {
               child: swipeImage(context),
               flex: 25,
             ),
-            //emptySizedBox(5),
+            Spacer(
+              flex: 1,
+            ),
             Expanded(child: swipeButton(), flex: 1),
-            //emptySizedBox(5),
+            Spacer(
+              flex: 1,
+            ),
             Expanded(child: productCard(), flex: 20),
-            emptySizedBox(5),
+            Spacer(
+              flex: 1,
+            ),
             Expanded(child: colorPadding(), flex: 5),
-            emptySizedBox(20),
+            Spacer(
+              flex: 1,
+            ),
             Expanded(
               child: sayacPadding(),
               flex: 5,
             ),
-            emptySizedBox(20),
+            Spacer(
+              flex: 1,
+            ),
             Expanded(
               child: cardStack(context),
               flex: 10,
@@ -115,18 +125,16 @@ class _ProductDetailState extends State<ProductDetail> {
   }
 
   Widget cartFavouriteContainer() {
-    return Expanded(
-      child: Container(
-        //margin: EdgeInsets.all(8),
-        padding: EdgeInsets.all(8),
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(5),
-            color: Colors.white,
-            border: Border.all(color: Colors.grey)),
-        child: Icon(
-          Icons.favorite,
-          color: favouriteState ? Colors.red : Colors.grey,
-        ),
+    return Container(
+      //margin: EdgeInsets.all(8),
+      padding: EdgeInsets.all(8),
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5),
+          color: Colors.white,
+          border: Border.all(color: Colors.grey)),
+      child: Icon(
+        Icons.favorite,
+        color: favouriteState ? Colors.red : Colors.grey,
       ),
     );
   }
